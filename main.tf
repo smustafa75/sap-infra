@@ -1,6 +1,11 @@
-provider "aws" {
+/*provider "aws" {
   region  = var.aws_region
   profile = "default"
+}*/
+
+provider "aws" {
+  region  = var.aws_region
+  profile = "render"
 }
 
 module "network" {
@@ -9,11 +14,11 @@ module "network" {
   private_subnets = var.private_subnets
   public_subnets  = var.public_subnets
   region_info     = data.aws_region.current.name
-  logging_bucket  = module.storage.bucket_arn
+ // logging_bucket  = module.storage.bucket_arn
   project_name    = var.project_name
 
 }
-
+/*
 module "storage" {
   source       = "./storage"
   project_name = var.project_name
@@ -24,7 +29,7 @@ module "storage" {
     module.network.aws_vpc_endpoint
   ]
 }
-
+*/
 
 module "compute" {
   source     = "./compute"
