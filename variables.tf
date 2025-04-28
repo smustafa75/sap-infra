@@ -52,11 +52,11 @@ variable "instance_profile" {
 
 variable "instance_hana_db01" {}
 variable "hana_db_ami01" {}
-variable hana_db_disk_root{}
-variable hana_db_disk_sap{}
-variable hana_db_disk_shared{}
-variable hana_db_disk_data{}
-variable hana_db_disk_log{}
+variable "hana_db_disk_root" {}
+variable "hana_db_disk_sap" {}
+variable "hana_db_disk_shared" {}
+variable "hana_db_disk_data" {}
+variable "hana_db_disk_log" {}
 
 variable "instance_hana_db02" {}
 variable "hana_db_ami02" {}

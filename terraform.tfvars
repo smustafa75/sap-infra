@@ -10,20 +10,20 @@ s3_policy        = "Access_S3"
 instance_profile = ""
 accessip         = "0.0.0.0/0"
 
-instance_hana_db01 = "XX.xlarge"
-hana_db_ami01      = ""
-hana_db_disk_root     = "100"
-hana_db_disk_sap   = "100"
-hana_db_disk_shared   = "500"
+instance_hana_db01  = "XX.xlarge"
+hana_db_ami01       = ""
+hana_db_disk_root   = "100"
+hana_db_disk_sap    = "100"
+hana_db_disk_shared = "500"
 hana_db_disk_data   = "800"
-hana_db_disk_log   = "150"
+hana_db_disk_log    = "150"
 
 instance_hana_db02 = "XX.Xxlarge"
 hana_db_ami02      = ""
 
 instance_hana_app = "XX.Xlarge"
 hana_app_ami      = ""
-hana_app_disk    = "500"
+hana_app_disk     = "500"
 
 
 instance_bastion = "t3.large"

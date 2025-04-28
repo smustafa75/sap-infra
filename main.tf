@@ -14,8 +14,8 @@ module "network" {
   private_subnets = var.private_subnets
   public_subnets  = var.public_subnets
   region_info     = data.aws_region.current.name
- // logging_bucket  = module.storage.bucket_arn
-  project_name    = var.project_name
+  // logging_bucket  = module.storage.bucket_arn
+  project_name = var.project_name
 
 }
 /*
@@ -36,13 +36,13 @@ module "compute" {
   aws_region = var.aws_region
 
 
-  instance_hana_db01 = var.instance_hana_db01
-  hana_db_ami01      = var.hana_db_ami01
-  hana_db_disk_root    = var.hana_db_disk_root
-  hana_db_disk_sap   = var.hana_db_disk_sap
+  instance_hana_db01  = var.instance_hana_db01
+  hana_db_ami01       = var.hana_db_ami01
+  hana_db_disk_root   = var.hana_db_disk_root
+  hana_db_disk_sap    = var.hana_db_disk_sap
   hana_db_disk_shared = var.hana_db_disk_shared
-  hana_db_disk_data= var.hana_db_disk_data
-  hana_db_disk_log= var.hana_db_disk_log
+  hana_db_disk_data   = var.hana_db_disk_data
+  hana_db_disk_log    = var.hana_db_disk_log
 
   instance_hana_db02 = var.instance_hana_db01
   hana_db_ami02      = var.hana_db_ami02
@@ -50,7 +50,7 @@ module "compute" {
 
   instance_hana_app = var.instance_hana_app
   hana_app_ami      = var.hana_app_ami
-  hana_app_disk    = var.hana_app_disk
+  hana_app_disk     = var.hana_app_disk
 
 
   instance_bastion = var.instance_bastion
@@ -90,8 +90,8 @@ module "iam" {
 
 module "cloudwatch" {
   source         = "./cloudwatch"
-  hana_db01    = module.compute.hana_db01_id
-  hana_db02    = module.compute.hana_db02_id
+  hana_db01      = module.compute.hana_db01_id
+  hana_db02      = module.compute.hana_db02_id
   region_info    = data.aws_region.current.name
   account_id     = data.aws_caller_identity.current.account_id
   partition_info = data.aws_partition.current.partition
